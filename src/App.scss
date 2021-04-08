@@ -1,0 +1,81 @@
+.App {
+  text-align: center;
+}
+
+$width: 200px ;
+$height: 200px;
+$padding: 20px;
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 2*$width + $padding;
+  height: 2*$height + 2*$padding;
+  align-items: center;
+  justify-content: space-between;;
+  padding: $padding/2 $padding;
+  //border: 1px solid black;
+  //border-radius: 50%;
+  //background-color: #81aed6;
+}
+
+.colorCards {
+  width: $height;
+  height: $height;
+  box-shadow: $padding/2 $padding/4 5px dimgray;
+}
+
+.green {
+  background-color: green;
+  border-top-left-radius: $height;
+}
+.red {
+  background-color: red;
+  border-top-right-radius: $height;
+}
+.blue {
+  background-color: blue;
+  border-bottom-right-radius: $height;
+}
+.orange {
+  background-color: orange;
+  border-bottom-left-radius: $height;
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

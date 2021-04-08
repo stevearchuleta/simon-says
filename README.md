@@ -1,3 +1,51 @@
+
+// SIMON SAYS GAME
+
+
+// ) OBJECTIVE: REMEMBER THE SEQUENCE OF FLASHING COLORS
+
+// THREE PHASES OF SIMON SAYS
+// 1) START BUTTON
+// 1) ADD COLOR TO ARRAY
+// 2) FLASHING COLOR
+// 3) USER PRESS ON COLOR THAT FLASHED
+// 4) ADD A NEW FLASHING COLOR
+
+// FIXED COLOR ARRAY WITH 4 COLORS
+//STATE:  
+// A) colorsArray - holds all of the randomly selected colors, 
+// B) isWorking = off, 
+// C) computer turn, 
+// D) player turn
+
+// COMPONENTS: 
+// A) start button, 
+// B) score card on button (conditionally rendered), 
+// C) background container, 
+// D) four color cards (reusable components)
+// E) UPON FAILURE - tryAgain card - holds final score and "play again"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
