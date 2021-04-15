@@ -1,14 +1,25 @@
 
 import './App.scss';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function App() {
 
   const [gameOn, setGameOn] = useState(false);
 
   function startGameHandle(){
-    console.log('Game On!');
+    setGameOn(true);
   };
+
+
+  useEffect(() => {
+    if(gameOn) {
+      console.log('Game On!')
+    } else {
+      console.log('Game Off!');
+    }
+  }, [gameOn]);
+
+  
 
   return (
     <div className="App">
