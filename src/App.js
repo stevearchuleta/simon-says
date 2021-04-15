@@ -1,10 +1,14 @@
 
 import './App.scss';
-import {useState} from 'react';
+import React, { useState } from "react";
 
 function App() {
 
+  const [gameOn, setGameOn] = useState(false);
 
+  function startGameHandle(){
+    console.log('Game On!');
+  };
 
   return (
     <div className="App">
@@ -17,7 +21,7 @@ function App() {
         <div className="colorCards red"></div>
         <div className="colorCards orange"></div>
         <div className="colorCards blue"></div>
-        <div className="startButton start">START</div>
+        <div className="startButton" onClick={startGameHandle}>START</div>
      </div>
       </header>
 
