@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 function App() {
 
   const [gameOn, setGameOn] = useState(false);
+  const [flashPhase, setFlashPhase] = useState(false);
 
   function startGameHandle(){
     setGameOn(true);
@@ -13,13 +14,18 @@ function App() {
 
   useEffect(() => {
     if(gameOn) {
-      console.log('Game On!')
+      console.log('Game On!');
+      setFlashPhase(true);
     } else {
       console.log('Game Off!');
     }
   }, [gameOn]);
 
-  
+  useEffect(()=>{
+    if(gameOn && flashPhase){
+      //flash color sequence
+    }
+  },[gameOn, flashPhase]);
 
   return (
     <div className="App">
