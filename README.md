@@ -5,25 +5,27 @@
 // ) OBJECTIVE: REMEMBER THE SEQUENCE OF FLASHING COLORS
 
 // THREE PHASES OF SIMON SAYS
-// 1) START BUTTON
-// 1) ADD COLOR TO ARRAY
-// 2) FLASHING COLOR
-// 3) USER PRESS ON COLOR THAT FLASHED
-// 4) ADD A NEW FLASHING COLOR
+// 1a) START BUTTON.
+// 1b) COMPUTER RANDOMLY ADDS COLOR TO ARRAY.
+// 1c) COLORS FLASH.
+// 2) USER PRESSES ON A COLOR SEQUENCE THAT MATCHES THE FLASHED COLORS.
+// 3a) COMPUTER ADDS A NEW FLASHING COLOR TO THE ARRAY.
+// 3b) REPEAT UNTIL USER ENTERS WRONG SEQUENCE.
 
 // FIXED COLOR ARRAY WITH 4 COLORS
-//STATE:  
-// A) colorsArray - holds all of the randomly selected colors, 
-// B) isWorking = off, 
-// C) computer turn, 
-// D) player turn
 
-// COMPONENTS: 
-// A) start button, 
-// B) score card on button (conditionally rendered), 
-// C) background container, 
-// D) four color cards (reusable components)
-// E) UPON FAILURE - tryAgain card - holds final score and "play again"
+// STATE:  
+// A) colorsArray - fixed color array holds all of the randomly selected colors. 
+// B) isPlaying = off. 
+// C) computer turn. 
+// D) player turn.
+
+// COMPONENTS: (CONTAINER, CARD, BUTTON)
+// A) start button.
+// B) score card on button (conditionally rendered).
+// C) background container.
+// D) four color cards (reusable components).
+// E) UPON FAILURE - tryAgain card - holds final score and "play again".
 
 
 
