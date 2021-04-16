@@ -5,27 +5,39 @@ import React, { useState, useEffect } from "react";
 function App() {
 
   const [gameOn, setGameOn] = useState(false);
-  const [flashPhase, setFlashPhase] = useState(false);
+  const [flashMode, setFlashMode] = useState(false);
+  const [colorArray, setColorArray] = useState([]);
+
+
+  let arrayOfColors = ['green', 'red', 'oramge', 'blue'];
 
   function startGameHandle(){
     setGameOn(true);
   };
 
 
+  function generateRandomColor(){
+    return arrayOfColors[Math.floor(Math.random() * 4)];
+  };
+
+
   useEffect(() => {
     if(gameOn) {
       console.log('Game On!');
-      setFlashPhase(true);
+      setFlashMode(true);
     } else {
       console.log('Game Off!');
     }
   }, [gameOn]);
 
+
   useEffect(()=>{
-    if(gameOn && flashPhase){
+    if(gameOn && flashMode){
       //flash color sequence
+      console.log('Flash is on!');
+      
     }
-  },[gameOn, flashPhase]);
+  },[gameOn, flashMode]);
 
   return (
     <div className="App">
