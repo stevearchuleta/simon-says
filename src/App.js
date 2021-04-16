@@ -9,17 +9,26 @@ function App() {
   const [colorArray, setColorArray] = useState([]);
 
 
-  let arrayOfColors = ['green', 'red', 'oramge', 'blue'];
+  let arrayOfColors = ['green', 'red', 'orange', 'blue'];
 
   function startGameHandle(){
     setGameOn(true);
   };
 
-
   function generateRandomColor(){
     return arrayOfColors[Math.floor(Math.random() * 4)];
   };
 
+  //======
+  // Add a new color to a copy of the empty colorArray
+  //======
+  function addColor() {
+    const copyOfColorArray = [...colorArray];
+    const newColor = generateRandomColor();
+    copyOfColorArray.push(newColor);
+    setColorArray(copyOfColorArray);
+    console.log(copyOfColorArray);
+  }
 
   useEffect(() => {
     if(gameOn) {
@@ -35,7 +44,7 @@ function App() {
     if(gameOn && flashMode){
       //flash color sequence
       console.log('Flash is on!');
-      
+      addColor();
     }
   },[gameOn, flashMode]);
 
